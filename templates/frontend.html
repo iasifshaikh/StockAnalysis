@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+	<title>Stockcast </title>
+	<style>
+		.row,
+		col-md-6 {
+			padding-top: 10px;
+		}
+
+		.navbar {
+			background-color: #040404;
+			width: 100%;
+		}
+
+		.navbar ul {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 0;
+
+		}
+
+		.navbar ul li {
+			display: block;
+			padding: 0.75rem;
+			list-style-type: none;
+		}
+
+		.navbar ul li a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.login {
+			position: absolute;
+			right: 20px;
+			top: 1.5rem;
+			border: 2px solid #00f000;
+			padding: 10px;
+			border-radius: 15px;
+		}
+		.login:hover{
+			background-color: #00f000;
+			color : #ffffff;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<nav class="navbar">
+			<ul>
+				<li><a href="" class="brand">
+						<h1>Stockcast</h1>
+					</a></li>
+				<!-- <li><a href="" class="login">Login</a></li> -->
+			</ul>
+		</nav>
+	</header>
+		<form action="/predict" method="POST" style="margin:50px;background:url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg');padding:20px;background-size: cover;width:100%;    margin: 0px 0px 0px 0px;">
+			<div class="container pt-5">
+					<div class="row">
+							<div class="col-md-12 text-center">
+									<div class="h2">
+
+									</div>
+							</div>
+					</div>
+					<div class="row">
+							<div class="col-md-6 text-center">
+									<input class="form-control" type="text" id="inp_1" name="inp_1" value="" placeholder="Enter news headline">
+							</div>
+							<div class="col-md-6 text-center">
+									<input class="form-control" type="text" id="inp_2" name="inp_2" value="" placeholder="Enter news headline">
+							</div>
+						</div>
+
+						<div class="row">
+								<div class="col-md-6 text-center">
+										<input class="form-control" type="text" id="inp_3" name="inp_3" value="" placeholder="Enter news headline">
+								</div>
+								<div class="col-md-6 text-center">
+										<input class="form-control" type="text" id="inp_4" name="inp_4" value="" placeholder="Enter news headline">
+								</div>
+						</div>
+                        <div class="row">
+							<div class="col-md-6 text-center">
+									<input class="form-control" type="text" id="inp_5" name="inp_5" value="" placeholder="Enter news headline">
+							</div>
+							<div class="col-md-6 text-center">
+									<input class="form-control" type="text" id="inp_6" name="inp_6" value="" placeholder="Enter news headline">
+							</div>
+						</div>
+
+						<div class="row">
+								<div class="col-md-6 text-center">
+										<input class="form-control" type="text" id="inp_7" name="inp_7" value="" placeholder="Enter news headline">
+								</div>
+								<div class="col-md-6 text-center">
+										<input class="form-control" type="text" id="inp_8" name="inp_8" value="" placeholder="Enter news headline">
+								</div>
+						</div>
+                        <div class="row">
+							<div class="col-md-6 text-center">
+									<input class="form-control" type="text" id="inp_9" name="inp_9" value="" placeholder="Enter news headline">
+							</div>
+							<div class="col-md-6 text-center">
+									<input class="form-control" type="text" id="inp_10" name="inp_10" value="" placeholder="Enter news headline">
+							</div>
+						</div>
+				 <div class="row">
+							<div class="col-md-6 text-center">
+									<input class="form-control" type="text" id="inp_11" name="inp_11" value="" placeholder="Enter news headline">
+							</div>
+							<div class="col-md-6 text-center">
+									<input class="form-control" type="text" id="inp_12" name="inp_12" value="" placeholder="Enter news headline">
+							</div>
+						</div>
+				 <div class="row">
+							<div class="col-md-6 text-center">
+									<input class="form-control" type="text" id="inp_13" name="inp_13" value="" placeholder="Enter news headline">
+							</div>
+							<div class="col-md-6 text-center">
+									<input class="form-control" type="text" id="inp_14" name="inp_14" value="" placeholder="Enter news headline">
+							</div>
+						</div>
+				<div class="row">
+							<div class="col-md-6 text-center">
+									<input class="form-control" type="text" id="inp_15" name="inp_15" value="" placeholder="Enter news headline">
+							</div>
+							<div class="col-md-6 text-center">
+									<input class="form-control" type="text" id="inp_16" name="inp_16" value="" placeholder="Enter news headline">
+							</div>
+						</div>
+
+	<div class="row">
+							<div class="col-md-12 text-center">
+									<div class="h2">
+										<p>Prediction</p>
+										<div class="col-md-6 text-center">
+									<input class="form-control" style="    margin: 0px 0px 0px 314px; " type="text" id="inp_10" name="inp_10" value="" placeholder="Prediction value">
+							</div>
+									</div>
+							</div>
+					</div>
+
+						<div class="row">
+								<div class="col-md-12 text-center" style=" margin:5px 0px 0px 0px; ">
+										<input type="submit" class="btn btn-primary" value="predict">
+								</div>
+						</div>
+
+						<div class="row">
+								<div class="col-md-12 text-center" style="margin-top:20px;">
+										<h1><b>{{ op_prediction }}</b></h1>
+								</div>
+						</div>
+			</div>
+		</form>
+  <!-- Footer -->
+<footer class="page-footer font-small blue pt-4">
+
+	<!-- Footer Links -->
+	<div class="container-fluid text-center text-md-left">
+
+	  <!-- Grid row -->
+	  <div class="row">
+
+		<!-- Grid column -->
+		<div class="col-md-12 mt-md-0 mt-3">
+
+		  <!-- Content -->
+		  <h5 class="text-uppercase">StockCast</h5>
+		  <p style="text-align:left;color: white;    margin: 0px 0px 0px 404px;
+}">This web application helps you predict stock price using news headline and sentiment Analysis.</p><br>
+			<p></p>
+
+		</div>
+		<!-- Grid column -->
+
+		<hr class="clearfix w-100 d-md-none pb-3">
+
+		<!-- Grid column -->
+		<div class="col-md-12 mb-md-0 mb-3">
+
+		  <!-- Links -->
+
+		<!-- Grid column -->
+
+		<!-- Grid column -->
+
+		<!-- Grid column -->
+
+	  </div>
+	  <!-- Grid row -->
+
+	</div>
+	<!-- Footer Links -->
+
+
+
+  </footer>
+  <!-- Footer -->
+	  <style>
+		  .page-footer{
+			  background-color: #040404;
+		  }
+		  .text-uppercase{
+			  color: white;
+		  }
+		  .list-unstyled{
+			  color:white;
+
+		  }
+
+	  </style>
+
+
+  </body>
+</html>
